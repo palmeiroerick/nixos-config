@@ -14,6 +14,7 @@
     ".xinitrc".source = ./.xinitrc;
     ".config/fish/config.fish".source = ./config.fish;
     ".config/xmonad/xmonad.hs".source = ./xmonad.hs;
+    ".gitconfig".source = ./.gitconfig;
   };
 
   home.sessionVariables = {};
