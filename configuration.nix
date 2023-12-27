@@ -39,10 +39,10 @@
         options = "caps:escape";
       };
       displayManager = {
-      	lightdm = {
-          background = "#000000";
-	};
-      };
+        startx = {
+          enable = true;
+        };
+	    };
       windowManager = {
         xmonad = {
           enable = true;
@@ -82,6 +82,7 @@
       nodejs
       unzip
       flatpak
+      ghc
     ];
   };
 
