@@ -15,6 +15,7 @@
     ".config/fish/config.fish".source = ./config.fish;
     ".config/xmonad/xmonad.hs".source = ./xmonad.hs;
     ".gitconfig".source = ./.gitconfig;
+    ".config/alacritty/alacritty.yml".source = ./alacritty.yml;
   };
 
   home.sessionVariables = {};
