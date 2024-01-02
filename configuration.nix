@@ -49,6 +49,11 @@
           enableContribAndExtras = true;
         };
       };
+      libinput = {
+        mouse = {
+          accelProfile = "flat";
+        };
+      };
     };
   };
 
