@@ -89,6 +89,7 @@
       flatpak
       ghc
       anki
+      xclip
     ];
   };
 

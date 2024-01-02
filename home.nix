@@ -17,6 +17,7 @@
     ".gitconfig".source = ./.gitconfig;
     ".config/alacritty/alacritty.yml".source = ./alacritty.yml;
     ".config/redshift/redshift.conf".source = ./redshift.conf;
+    ".config/nvim/init.lua".source = ./init.lua;
   };
 
   home.sessionVariables = {};
