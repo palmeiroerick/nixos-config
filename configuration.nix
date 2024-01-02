@@ -88,6 +88,7 @@
       unzip
       flatpak
       ghc
+      anki
     ];
   };
 
