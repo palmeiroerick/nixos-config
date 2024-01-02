@@ -5,3 +5,6 @@ if status is-login
 end
 
 set -x PATH $PATH ~/.npm-global/bin
+set -x PATH $PATH /var/lib/flatpak/exports/bin/
+
+alias obsidian="md.obsidian.Obsidian"
