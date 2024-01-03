@@ -34,7 +34,7 @@ myFocusedBorderColor = "#000000"
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   [ ((modm              , xK_Return), spawn $ XMonad.terminal conf)
-  , ((modm              , xK_d     ), spawn "dmenu_run")
+  , ((modm              , xK_d     ), spawn "rofi -show drun")
   , ((modm .|. shiftMask, xK_q     ), kill)
   , ((modm              , xK_Tab   ), windows W.focusDown)
   , ((modm .|. shiftMask, xK_r     ), spawn "xmonad --recompile; xmonad --restart")

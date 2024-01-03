@@ -78,7 +78,6 @@
       neovim
       brave
       alacritty
-      dmenu
       redshift
       git
       spotify
@@ -91,6 +90,7 @@
       anki
       xclip
       neofetch
+      rofi
     ];
   };
 
