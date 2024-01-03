@@ -8,7 +8,34 @@
 
   home.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "Hack" ]; })
+    dconf
   ];
+
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome.adwaita-icon-theme;
+    };
+    iconTheme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome.adwaita-icon-theme;
+    };
+    cursorTheme = {
+      name = "Adwaita";
+      package = pkgs.gnome.adwaita-icon-theme;
+    };
+    gtk3 = {
+      extraConfig = {
+        gtk-application-prefer-dark-theme=1;
+      };   
+    };
+    gtk4 = {
+      extraConfig = {
+        gtk-application-prefer-dark-theme=1;
+      };   
+    };
+  };
 
   home.file = {
     ".xinitrc".source = ./.xinitrc;

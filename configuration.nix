@@ -90,6 +90,7 @@
       ghc
       anki
       xclip
+      neofetch
     ];
   };
 
