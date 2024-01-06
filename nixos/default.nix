@@ -1,35 +1,14 @@
 { config, lib, pkgs, ... }: {
   imports = [
-    ./hardware.nix
+    ./modules/boot
+    ./modules/flakes
+    ./modules/hardware
+    ./modules/locale
+    ./modules/network
+    ./modules/nixpkgs
+    ./modules/timezone
+    ./modules/users
   ];
-
-  boot = {
-    loader = {
-      grub = {
-        enable = true;
-        device = "/dev/sda";
-      };
-    };
-  };
-
-  networking = {
-    hostName = "nixos";
-    networkmanager = {
-      enable = true;
-    };
-  };
-
-  time = {
-    timeZone = "America/Sao_Paulo";
-  };
-
-  i18n = {
-    defaultLocale = "en_US.UTF-8";
-  };
-
-  console = {
-    useXkbConfig = true;
-  };
 
   services = {
     xserver = {
@@ -54,22 +33,6 @@
           accelProfile = "flat";
         };
       };
-    };
-  };
-
-  users = {
-    users = {
-      erick = {
-        isNormalUser = true;
-        extraGroups = [ "wheel" ];
-      };
-    };
-    defaultUserShell = pkgs.fish;
-  };
-
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
     };
   };
 
@@ -123,15 +86,6 @@
   services = {
     openssh = {
       enable = true;
-    };
-  };
-
-  nix = {
-    settings = {
-      experimental-features = [
-        "nix-command"
-        "flakes"
-      ];
     };
   };
 

@@ -8,8 +8,8 @@
       url = "github:nix-community/home-manager/release-23.11";
       inputs = {
         nixpkgs = {
-	  follows = "nixpkgs";
-	};
+          follows = "nixpkgs";
+        };
       };
     };
   };
@@ -24,19 +24,19 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
   in {
-    nixosConfigurations = {
-      nixos = lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./configuration.nix
-        ];
-      };
-    };
     homeConfigurations = {
       erick = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-          ./home.nix
+          ./home
+        ];
+      };
+    };
+    nixosConfigurations = {
+      nixos = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./nixos
         ];
       };
     };
