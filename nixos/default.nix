@@ -38,7 +38,6 @@
 
   environment = {
     systemPackages = with pkgs; [
-      neovim
       brave
       alacritty
       redshift
@@ -51,7 +50,6 @@
       flatpak
       ghc
       anki
-      xclip
       neofetch
       rofi
     ];
