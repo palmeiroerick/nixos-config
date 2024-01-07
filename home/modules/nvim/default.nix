@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }: {
+{ pkgs, ... }: {
   programs = 
   let
     toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
@@ -14,6 +14,9 @@
 
         # Lua
         lua-language-server
+
+        # Nix
+        nil
 
         # Hmtl, Css and JavaScript
         vscode-langservers-extracted
