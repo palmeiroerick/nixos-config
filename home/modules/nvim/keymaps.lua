@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+
 local keymap = vim.keymap.set
 
 keymap("n", "<Tab>", ">>")
@@ -25,3 +27,7 @@ keymap({ "n", "v", "i", "c" }, "<Up>", "<Nop>")
 keymap({ "n", "v", "i", "c" }, "<Down>", "<Nop>")
 keymap({ "n", "v", "i", "c" }, "<Left>", "<Nop>")
 keymap({ "n", "v", "i", "c" }, "<Right>", "<Nop>")
+
+keymap("n", "<leader>e", ":NvimTreeFocus<cr>")
+
+keymap("n", "<leader>f", ":Telescope find_files<cr>")

@@ -37,10 +37,27 @@
         "type": "github"
       }
     },
+    "plugin-onedarkpro": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1703781889,
+        "narHash": "sha256-O0UYd4PBgtElLFvvJJw3GyBVt0OiYgfeFYNDyfP+cfE=",
+        "owner": "olimorris",
+        "repo": "onedarkpro.nvim",
+        "rev": "44badbaa1c4408679adc6b6979b669540db3fb46",
+        "type": "github"
+      },
+      "original": {
+        "owner": "olimorris",
+        "repo": "onedarkpro.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "plugin-onedarkpro": "plugin-onedarkpro"
       }
     }
   },
