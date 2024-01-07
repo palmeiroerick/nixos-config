@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   programs = {
-    home-manager = {
+    ssh = {
       enable = true;
     };
   };

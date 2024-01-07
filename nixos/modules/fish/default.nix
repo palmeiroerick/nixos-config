@@ -1,6 +1,9 @@
 { config, pkgs, ... }: {
   programs = {
-    home-manager = {
+    fish = {
+      enable = true;
+    };
+    starship = {
       enable = true;
     };
   };

@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   programs = {
-    home-manager = {
+    vscode = {
       enable = true;
     };
   };
