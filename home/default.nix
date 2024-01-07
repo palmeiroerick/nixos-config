@@ -11,7 +11,6 @@
     ./modules/redshift
     ./modules/rofi
     ./modules/ssh
-    ./modules/vscode
     ./modules/xinitrc
     ./modules/xmonad
   ];
