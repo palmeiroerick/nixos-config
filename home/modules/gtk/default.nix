@@ -1,6 +1,6 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   home = {
-    packages = with pkgs; [ dconf ];
+    packages = with pkgs; [dconf];
   };
 
   gtk = {

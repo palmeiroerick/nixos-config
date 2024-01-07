@@ -1,6 +1,5 @@
-{ pkgs, ... }: {
-  programs = 
-  let
+{pkgs, ...}: {
+  programs = let
     toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
   in {
     neovim = {
@@ -17,6 +16,7 @@
 
         # Nix
         nil
+        alejandra
 
         # Hmtl, Css and JavaScript
         vscode-langservers-extracted
@@ -33,6 +33,10 @@
         {
           plugin = nvim-lspconfig;
           config = toLuaFile ./plugins/lsp.lua;
+        }
+        {
+          plugin = none-ls-nvim;
+          config = toLuaFile ./plugins/none-ls.lua;
         }
         {
           plugin = nvim-treesitter.withAllGrammars;
@@ -75,7 +79,7 @@
         }
         cmp-nvim-lsp
         cmp-buffer
-        cmp-path  
+        cmp-path
         cmp-cmdline
         cmp_luasnip
         luasnip

@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   services = {
     redshift = {
       enable = true;

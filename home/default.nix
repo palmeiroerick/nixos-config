@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   imports = [
     ./modules/alacritty
     ./modules/fonts

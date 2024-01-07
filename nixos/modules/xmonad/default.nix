@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   services = {
     xserver = {
       enable = true;
@@ -10,7 +10,7 @@
         startx = {
           enable = true;
         };
-	    };
+      };
       windowManager = {
         xmonad = {
           enable = true;

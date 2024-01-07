@@ -20,9 +20,6 @@ keymap("v", "<A-k>", ":m '<-2<CR>gv=gv")
 keymap("n", "<S-l>", ":bn<cr>")
 keymap("n", "<S-h>", ":bp<cr>")
 
-keymap("n", "<C-q>", ":qa!<cr>")
-keymap("n", "<C-w>", ":wa!<cr>")
-
 keymap({ "n", "v", "i", "c" }, "<Up>", "<Nop>")
 keymap({ "n", "v", "i", "c" }, "<Down>", "<Nop>")
 keymap({ "n", "v", "i", "c" }, "<Left>", "<Nop>")

@@ -1,9 +1,9 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   users = {
     users = {
       erick = {
         isNormalUser = true;
-        extraGroups = [ "wheel" ];
+        extraGroups = ["wheel"];
       };
     };
     defaultUserShell = pkgs.fish;
