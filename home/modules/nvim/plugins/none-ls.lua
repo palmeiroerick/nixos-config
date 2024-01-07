@@ -17,6 +17,7 @@ null_ls.setup({
     end
   end,
   sources = {
+    formatting.stylua,
     formatting.alejandra,
     formatting.stylish_haskell,
   },

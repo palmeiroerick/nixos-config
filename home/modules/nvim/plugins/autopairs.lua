@@ -1,5 +1,5 @@
 require("nvim-autopairs").setup({
-  disable_filetype = { "TelescopePrompt", },
+  disable_filetype = { "TelescopePrompt" },
   disable_in_macro = false,
   disable_in_visualblock = false,
   disable_in_replace_mode = true,
