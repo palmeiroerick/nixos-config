@@ -8,6 +8,7 @@
     ./modules/home-manager
     ./modules/nixpkgs
     ./modules/nvim
+    ./modules/ranger
     ./modules/redshift
     ./modules/rofi
     ./modules/ssh
