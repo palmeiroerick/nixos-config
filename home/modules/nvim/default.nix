@@ -22,6 +22,8 @@
         # Hmtl, Css and JavaScript
         vscode-langservers-extracted
         nodePackages.typescript-language-server
+        eslint_d
+        prettierd
         tailwindcss-language-server
 
         # Haskell
@@ -30,8 +32,9 @@
       ];
 
       extraLuaConfig = ''
-        ${builtins.readFile ./options.lua}
-        ${builtins.readFile ./keymaps.lua}
+        ${builtins.readFile ./config/diagnostics.lua}
+        ${builtins.readFile ./config/keymaps.lua}
+        ${builtins.readFile ./config/options.lua}
       '';
 
       plugins = with pkgs.vimPlugins; [

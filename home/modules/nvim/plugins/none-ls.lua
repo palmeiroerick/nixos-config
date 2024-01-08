@@ -20,5 +20,8 @@ null_ls.setup({
     formatting.stylua,
     formatting.alejandra,
     formatting.stylish_haskell,
+
+    diagnostics.eslint_d,
+    formatting.prettierd,
   },
 })
