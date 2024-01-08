@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ./modules/alacritty
+    ./modules/fish
     ./modules/fonts
     ./modules/git
     ./modules/gtk
