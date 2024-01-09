@@ -10,7 +10,6 @@
       ghc
       anki
       neofetch
-      vscode
     ];
   };
 }
