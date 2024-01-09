@@ -10,6 +10,7 @@
       ghc
       anki
       neofetch
+      eza
     ];
   };
 }
