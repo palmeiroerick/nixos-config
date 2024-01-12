@@ -8,7 +8,6 @@
       unzip
       flatpak
       ghc
-      anki
       neofetch
       eza
     ];
