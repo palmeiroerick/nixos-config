@@ -10,6 +10,7 @@
       ghc
       neofetch
       eza
+      pavucontrol
     ];
   };
 }
