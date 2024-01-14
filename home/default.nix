@@ -18,5 +18,6 @@
     ./modules/vscode
     ./modules/xinitrc
     ./modules/xmonad
+    ./modules/zathura
   ];
 }
