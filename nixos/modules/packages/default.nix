@@ -10,6 +10,7 @@
       eza
       pavucontrol
       mitscheme
+      chicken
     ];
   };
 }
