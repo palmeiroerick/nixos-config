@@ -9,6 +9,7 @@
       ghc
       eza
       pavucontrol
+      mitscheme
     ];
   };
 }

@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ./modules/alacritty
+    ./modules/emacs
     ./modules/feh
     ./modules/fish
     ./modules/fonts
