@@ -16,6 +16,7 @@
     ./modules/rofi
     ./modules/ssh
     ./modules/tmux
+    ./modules/vscode
     ./modules/xinitrc
     ./modules/xmonad
     ./modules/zathura
