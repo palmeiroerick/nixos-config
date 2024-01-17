@@ -20,6 +20,7 @@ null_ls.setup({
     formatting.stylua,
     formatting.alejandra,
     formatting.stylish_haskell,
+    formatting.emacs_scheme_mode,
 
     diagnostics.eslint_d,
     formatting.prettierd,
