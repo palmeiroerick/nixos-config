@@ -85,13 +85,27 @@
           plugin = nvim-cmp;
           config = toLuaFile ./plugins/completion.lua;
         }
-        cmp-nvim-lsp
-        cmp-buffer
-        cmp-path
-        cmp-cmdline
-        cmp_luasnip
-        luasnip
-        friendly-snippets
+        {
+          plugin = cmp-nvim-lsp;
+        }
+        {
+          plugin = cmp-buffer;
+        }
+        {
+          plugin = cmp-path;
+        }
+        {
+          plugin = cmp-cmdline;
+        }
+        {
+          plugin = cmp_luasnip;
+        }
+        {
+          plugin = luasnip;
+        }
+        {
+          plugin = friendly-snippets;
+        }
         {
           plugin = nvim-autopairs;
           config = toLuaFile ./plugins/autopairs.lua;
