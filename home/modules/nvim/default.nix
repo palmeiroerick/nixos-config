@@ -100,6 +100,9 @@
           plugin = alpha-nvim;
           config = toLuaFile ./plugins/alpha.lua;
         }
+        {
+          plugin = nvim-ts-rainbow2;
+        }
       ];
     };
   };
