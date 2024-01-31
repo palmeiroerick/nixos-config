@@ -20,6 +20,8 @@ local options = {
   splitright = true,
   swapfile = false,
   clipboard = "unnamedplus",
+  signcolumn = "yes",
+  colorcolumn = "80,120",
 }
 
 for key, value in pairs(options) do

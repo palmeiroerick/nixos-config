@@ -28,5 +28,6 @@ keymap({ "n", "v", "i", "c" }, "<Right>", "<Nop>")
 keymap("n", "<leader>e", ":NvimTreeFocus<cr>")
 
 keymap("n", "<leader>f", ":Telescope find_files<cr>")
+keymap("n", "<leader>b", ":Telescope buffers<cr>")
 
 keymap("n", "K", ":lua vim.lsp.buf.hover()<CR>")
