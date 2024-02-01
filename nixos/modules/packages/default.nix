@@ -13,6 +13,7 @@
       mitscheme
       chicken
       pulseaudio
+      emacs
     ];
   };
 }
