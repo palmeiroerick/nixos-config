@@ -125,6 +125,13 @@
           plugin = nvim-notify;
           config = toLuaFile ./plugins/notify.lua;
         }
+        {
+          plugin = comment-nvim;
+          config = toLuaFile ./plugins/comment.lua;
+        }
+        {
+          plugin = nvim-ts-context-commentstring;
+        }
       ];
     };
   };
