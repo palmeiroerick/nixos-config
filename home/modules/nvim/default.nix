@@ -32,9 +32,10 @@
       ];
 
       extraLuaConfig = ''
-        ${builtins.readFile ./config/diagnostics.lua}
-        ${builtins.readFile ./config/keymaps.lua}
         ${builtins.readFile ./config/options.lua}
+        ${builtins.readFile ./config/keymaps.lua}
+        ${builtins.readFile ./config/diagnostics.lua}
+        ${builtins.readFile ./config/autocmd.lua}
       '';
 
       plugins = with pkgs.vimPlugins; [
@@ -72,10 +73,6 @@
         {
           plugin = indent-blankline-nvim;
           config = toLuaFile ./plugins/indentline.lua;
-        }
-        {
-          plugin = vim-illuminate;
-          config = toLuaFile ./plugins/illuminate.lua;
         }
         {
           plugin = gitsigns-nvim;
