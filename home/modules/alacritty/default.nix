@@ -5,8 +5,8 @@
       settings = {
         window = {
           padding = {
-            x = 8;
-            y = 8;
+            x = 3;
+            y = 3;
           };
         };
         scrolling = {
