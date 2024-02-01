@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   services = {
     xserver = {
       enable = true;
@@ -12,9 +12,8 @@
         };
       };
       windowManager = {
-        xmonad = {
+        i3 = {
           enable = true;
-          enableContribAndExtras = true;
         };
       };
       libinput = {
@@ -22,6 +21,9 @@
           accelProfile = "flat";
         };
       };
+      excludePackages = with pkgs; [
+        xterm
+      ];
     };
   };
 }

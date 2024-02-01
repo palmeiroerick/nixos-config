@@ -12,6 +12,7 @@
       pavucontrol
       mitscheme
       chicken
+      pulseaudio
     ];
   };
 }

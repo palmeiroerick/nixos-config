@@ -9,6 +9,7 @@
     ./modules/gtk
     ./modules/home
     ./modules/home-manager
+    ./modules/i3
     ./modules/nixpkgs
     ./modules/nvim
     ./modules/ranger
@@ -18,7 +19,6 @@
     ./modules/tmux
     ./modules/vscode
     ./modules/xinitrc
-    ./modules/xmonad
     ./modules/zathura
   ];
 }

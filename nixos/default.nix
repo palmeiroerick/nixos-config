@@ -12,6 +12,6 @@
     ./modules/system
     ./modules/timezone
     ./modules/users
-    ./modules/xmonad
+    ./modules/xserver
   ];
 }
