@@ -21,8 +21,15 @@ local options = {
   swapfile = false,
   clipboard = "unnamedplus",
   signcolumn = "yes",
-  colorcolumn = "80,120",
+  colorcolumn = "80",
+  ignorecase = true,
+  updatetime = 250,
+  smartcase = true,
+  statuscolumn = "%=%{v:relnum?v:relnum:v:lnum} %s",
 }
+
+vim.g.loaded_matchparen = 1
+vim.g.mapleader = " "
 
 for key, value in pairs(options) do
   vim.opt[key] = value
