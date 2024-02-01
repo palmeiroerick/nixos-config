@@ -8,5 +8,6 @@ keymap("v", "<S-Tab>", "<gv")
 keymap("n", "<leader>e", "<cmd>NvimTreeFocus<cr>")
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>")
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>")
+keymap("n", "<leader>n", "<cmd>Telescope notify<cr>")
 
 keymap("n", "K", ":lua vim.lsp.buf.hover()<CR>")

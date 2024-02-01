@@ -121,6 +121,10 @@
         {
           plugin = nui-nvim;
         }
+        {
+          plugin = nvim-notify;
+          config = toLuaFile ./plugins/notify.lua;
+        }
       ];
     };
   };
