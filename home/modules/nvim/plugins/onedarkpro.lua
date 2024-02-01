@@ -1,6 +1,9 @@
 require("onedarkpro").setup({
   options = {
-    transparency = true,
+    transparency = false,
+  },
+  colors = {
+    bg = "#1e2127",
   },
 })
 
