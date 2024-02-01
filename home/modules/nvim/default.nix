@@ -114,6 +114,13 @@
         {
           plugin = nvim-ts-rainbow2;
         }
+        {
+          plugin = noice-nvim;
+          config = toLuaFile ./plugins/noice.lua;
+        }
+        {
+          plugin = nui-nvim;
+        }
       ];
     };
   };
