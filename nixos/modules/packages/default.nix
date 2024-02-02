@@ -11,7 +11,6 @@
       eza
       pavucontrol
       mitscheme
-      chicken
       pulseaudio
       emacs
     ];
