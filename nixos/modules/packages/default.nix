@@ -13,6 +13,7 @@
       mitscheme
       pulseaudio
       emacs
+      ueberzugpp
     ];
   };
 }
