@@ -26,6 +26,7 @@ local options = {
   updatetime = 250,
   smartcase = true,
   statuscolumn = "%=%{v:relnum?v:relnum:v:lnum} %s",
+  cmdheight = 0,
 }
 
 vim.g.loaded_matchparen = 1
