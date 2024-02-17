@@ -7,6 +7,20 @@ vim.api.nvim_create_autocmd("BufEnter", {
   end,
 })
 
+vim.api.nvim_create_autocmd("BufWritePre", {
+  callback = function()
+    local filetype = vim.bo.filetype
+    if
+      filetype == "javascript"
+      or filetype == "javascriptreact"
+      or filetype == "typescript"
+      or filetype == "typescriptreact"
+    then
+      vim.cmd("OrganizeImports")
+    end
+  end,
+})
+
 vim.cmd([[
   augroup _statuscolumn
     autocmd!
