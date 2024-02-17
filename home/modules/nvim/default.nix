@@ -76,6 +76,12 @@
           config = toLuaFile ./plugins/treesitter.lua;
         }
         {
+          plugin = nvim-ts-rainbow2;
+        }
+        {
+          plugin = nvim-ts-autotag;
+        }
+        {
           plugin = onedarkpro-nvim;
           config = toLuaFile ./plugins/onedarkpro.lua;
         }
@@ -137,9 +143,6 @@
         {
           plugin = alpha-nvim;
           config = toLuaFile ./plugins/alpha.lua;
-        }
-        {
-          plugin = nvim-ts-rainbow2;
         }
         {
           plugin = comment-nvim;

@@ -21,4 +21,8 @@ require("nvim-treesitter.configs").setup({
       "TSRainbowCyan",
     },
   },
+
+  autotag = {
+    enable = true,
+  },
 })
