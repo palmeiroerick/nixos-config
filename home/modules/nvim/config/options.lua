@@ -27,8 +27,10 @@ local options = {
   smartcase = true,
   statuscolumn = "%=%{v:relnum?v:relnum:v:lnum} %s",
   cmdheight = 0,
+  conceallevel = 2,
 }
 
+vim.g.markdown_recommended_style = 0
 vim.g.loaded_matchparen = 1
 vim.g.mapleader = " "
 

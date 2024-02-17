@@ -37,10 +37,27 @@
         "type": "github"
       }
     },
+    "plugin-obsidian-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1707874119,
+        "narHash": "sha256-VIc5qgzqJjSv2A0v8tM25pWh+smX9DYXVsyFNTGMPbQ=",
+        "owner": "epwalsh",
+        "repo": "obsidian.nvim",
+        "rev": "0a6739d2229c8eb30396db550f3818e092088c27",
+        "type": "github"
+      },
+      "original": {
+        "owner": "epwalsh",
+        "repo": "obsidian.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "plugin-obsidian-nvim": "plugin-obsidian-nvim"
       }
     }
   },

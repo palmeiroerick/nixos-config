@@ -4,6 +4,7 @@
     nixpkgs = {
       url = "github:NixOs/nixpkgs/nixos-23.11";
     };
+
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11";
       inputs = {
@@ -12,12 +13,17 @@
         };
       };
     };
+
+    plugin-obsidian-nvim = {
+      url = "github:epwalsh/obsidian.nvim";
+      flake = false;
+    };
   };
   outputs = {
     nixpkgs,
     home-manager,
     ...
-  }: let
+  } @ inputs: let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -28,6 +34,7 @@
         modules = [
           ./home
         ];
+        extraSpecialArgs = {inherit inputs;};
       };
     };
     nixosConfigurations = {

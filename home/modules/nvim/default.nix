@@ -1,4 +1,23 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+  nixpkgs = {
+    overlays = [
+      (final: prev: {
+        vimPlugins =
+          prev.vimPlugins
+          // {
+            obsidian-nvim = prev.vimUtils.buildVimPlugin {
+              name = "obsidian";
+              src = inputs.plugin-obsidian-nvim;
+            };
+          };
+      })
+    ];
+  };
+
   programs = let
     toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
   in {
@@ -29,6 +48,9 @@
         # Haskell
         haskell-language-server
         stylish-haskell
+
+        # Obsidian nvim
+        ripgrep
       ];
 
       extraLuaConfig = ''
@@ -65,6 +87,9 @@
         {
           plugin = telescope-nvim;
           config = toLuaFile ./plugins/telescope.lua;
+        }
+        {
+          plugin = plenary-nvim;
         }
         {
           plugin = lualine-nvim;
@@ -120,6 +145,10 @@
         }
         {
           plugin = nvim-ts-context-commentstring;
+        }
+        {
+          plugin = obsidian-nvim;
+          config = toLuaFile ./plugins/obsidian.lua;
         }
       ];
     };
