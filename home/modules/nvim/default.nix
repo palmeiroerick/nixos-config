@@ -49,10 +49,7 @@
         eslint_d
         prettierd
         tailwindcss-language-server
-
-        # Haskell
-        haskell-language-server
-        stylish-haskell
+        emmet-ls
 
         # Obsidian nvim
         ripgrep
