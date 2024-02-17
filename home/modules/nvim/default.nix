@@ -13,6 +13,11 @@
               name = "obsidian";
               src = inputs.plugin-obsidian-nvim;
             };
+
+            whichkey-nvim = prev.vimUtils.buildVimPlugin {
+              name = "whichkey";
+              src = inputs.plugin-whichkey-nvim;
+            };
           };
       })
     ];
@@ -149,6 +154,10 @@
         {
           plugin = obsidian-nvim;
           config = toLuaFile ./plugins/obsidian.lua;
+        }
+        {
+          plugin = whichkey-nvim;
+          config = toLuaFile ./plugins/whichkey.lua;
         }
       ];
     };

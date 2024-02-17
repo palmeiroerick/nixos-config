@@ -28,6 +28,9 @@ local options = {
   statuscolumn = "%=%{v:relnum?v:relnum:v:lnum} %s",
   cmdheight = 0,
   conceallevel = 2,
+  timeout = true,
+  timeoutlen = 300,
+  whichwrap = "h,l",
 }
 
 vim.g.markdown_recommended_style = 0

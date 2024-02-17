@@ -18,6 +18,11 @@
       url = "github:epwalsh/obsidian.nvim";
       flake = false;
     };
+
+    plugin-whichkey-nvim = {
+      url = "github:folke/which-key.nvim";
+      flake = false;
+    };
   };
   outputs = {
     nixpkgs,
