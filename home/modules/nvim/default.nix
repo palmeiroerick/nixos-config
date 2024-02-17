@@ -159,6 +159,10 @@
           plugin = whichkey-nvim;
           config = toLuaFile ./plugins/whichkey.lua;
         }
+        {
+          plugin = bufferline-nvim;
+          config = toLuaFile ./plugins/bufferline.lua;
+        }
       ];
     };
   };
