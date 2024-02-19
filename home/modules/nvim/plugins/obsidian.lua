@@ -11,10 +11,6 @@ require("obsidian").setup({
   completion = {
     nvim_cmp = true,
     min_chars = 2,
-    new_notes_location = "notes_subdir",
-    preferred_link_style = "wiki",
-    prepend_note_id = true,
-    prepend_note_path = true,
   },
 
   mappings = {
@@ -25,6 +21,8 @@ require("obsidian").setup({
       opts = { noremap = false, expr = true, buffer = true },
     },
   },
+
+  new_notes_location = "notes_subdir",
 
   note_id_func = function(title)
     title = ""
@@ -45,6 +43,18 @@ require("obsidian").setup({
 
     return title
   end,
+
+  wiki_link_func = function(opts)
+    if opts.id == nil then
+      return string.format("[[%s]]", opts.label)
+    elseif opts.label ~= opts.id then
+      return string.format("[[%s|%s]]", opts.id, opts.label)
+    else
+      return string.format("[[%s]]", opts.id)
+    end
+  end,
+
+  preferred_link_style = "wiki",
 
   disable_frontmatter = false,
 
@@ -77,6 +87,12 @@ require("obsidian").setup({
     height = 10,
     wrap = true,
   },
+
+  follow_url_func = function(url)
+    vim.fn.jobstart({ "xdg-open", url })
+  end,
+
+  open_app_foreground = false,
 
   picker = {
     name = "telescope.nvim",
