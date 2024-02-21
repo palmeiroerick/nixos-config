@@ -24,7 +24,7 @@ keymap("n", "<S-h>", "<cmd>bp<cr>", { desc = "Prev buffer" })
 keymap("n", "<S-l>", "<cmd>bn<cr>", { desc = "Next buffer" })
 
 -- Save File
-keymap("n", "<C-s>", "<cmd>wa<cr><esc>", { desc = "Save file" })
+keymap("n", "<C-s>", "<cmd>wa!<cr><esc>", { desc = "Save file" })
 
 -- NvimTree
 keymap("n", "<leader>e", "<cmd>NvimTreeFocus<cr>", { desc = "File Explorer" })

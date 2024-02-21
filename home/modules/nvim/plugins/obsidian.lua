@@ -25,22 +25,6 @@ require("obsidian").setup({
   new_notes_location = "notes_subdir",
 
   note_id_func = function(title)
-    title = ""
-
-    for _ = 1, 6 do
-      local char = ""
-
-      if math.random(1, 2) == 1 then
-        char = string.char(math.random(48, 57))
-      else
-        char = string.char(math.random(97, 122))
-      end
-
-      title = title .. char
-    end
-
-    title = tostring(os.date("%m%d%y-%H%M%S")) .. "-" .. title
-
     return title
   end,
 
