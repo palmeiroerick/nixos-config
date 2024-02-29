@@ -35,14 +35,3 @@ keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
 
 -- LSP
 keymap("n", "<S-k>", ":lua vim.lsp.buf.hover()<cr>", { desc = "Lsp Hover" })
-
--- Obsidian
-keymap("n", "<c-o>", "<cmd>ObsidianSearch<cr>", { desc = "Obsidian Search" })
-keymap("n", "<leader>oo", "<cmd>ObsidianOpen<cr>", { desc = "Open Obsidian" })
-keymap("n", "<leader>on", "<cmd>ObsidianNew<cr>", { desc = "New Note" })
-keymap("n", "<leader>of", "<cmd>ObsidianFollowLink<cr>", { desc = "Follow Link" })
-keymap("n", "<leader>ot", "<cmd>ObsidianTags<cr>", { desc = "Tags" })
-keymap("n", "<leader>ob", "<cmd>ObsidianBackLinks<cr>", { desc = "BackLinks" })
-keymap("n", "<leader>ok", "<cmd>ObsidianLinks<cr>", { desc = "Links" })
-keymap("v", "<leader>ol", "<cmd>ObsidianLink<cr>", { desc = "Link" })
-keymap("v", "<leader>oi", "<cmd>ObsidianLinkNew<cr>", { desc = "Link New" })

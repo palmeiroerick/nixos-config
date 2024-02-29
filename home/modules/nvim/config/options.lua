@@ -27,7 +27,6 @@ local options = {
   smartcase = true,
   statuscolumn = "%=%{v:relnum?v:relnum:v:lnum} %s",
   cmdheight = 0,
-  conceallevel = 2,
   timeout = true,
   timeoutlen = 300,
   whichwrap = "h,l",

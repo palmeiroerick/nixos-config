@@ -9,11 +9,6 @@
         vimPlugins =
           prev.vimPlugins
           // {
-            obsidian-nvim = prev.vimUtils.buildVimPlugin {
-              name = "obsidian";
-              src = inputs.plugin-obsidian-nvim;
-            };
-
             whichkey-nvim = prev.vimUtils.buildVimPlugin {
               name = "whichkey";
               src = inputs.plugin-whichkey-nvim;
@@ -50,9 +45,6 @@
         prettierd
         tailwindcss-language-server
         emmet-ls
-
-        # Obsidian nvim
-        ripgrep
       ];
 
       extraLuaConfig = ''
@@ -150,10 +142,6 @@
         }
         {
           plugin = nvim-ts-context-commentstring;
-        }
-        {
-          plugin = obsidian-nvim;
-          config = toLuaFile ./plugins/obsidian.lua;
         }
         {
           plugin = whichkey-nvim;

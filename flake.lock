@@ -23,33 +23,17 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1708979614,
-        "narHash": "sha256-FWLWmYojIg6TeqxSnHkKpHu5SGnFP5um1uUjH+wRV6g=",
+        "lastModified": 1709128929,
+        "narHash": "sha256-GWrv9a+AgGhG4/eI/CyVVIIygia7cEy68Huv3P8oyaw=",
         "owner": "NixOs",
         "repo": "nixpkgs",
-        "rev": "b7ee09cf5614b02d289cd86fcfa6f24d4e078c2a",
+        "rev": "c8e74c2f83fe12b4e5a8bd1abbc090575b0f7611",
         "type": "github"
       },
       "original": {
         "owner": "NixOs",
         "ref": "nixos-23.11",
         "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "plugin-obsidian-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1709052471,
-        "narHash": "sha256-8JpbqzbAs6fvM3iyyWszBl1LIp1tqNJ4Ngep0EunCRg=",
-        "owner": "epwalsh",
-        "repo": "obsidian.nvim",
-        "rev": "ebf4cd26f8c69e6ed025d06dfb4144212817878b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "epwalsh",
-        "repo": "obsidian.nvim",
         "type": "github"
       }
     },
@@ -73,7 +57,6 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "plugin-obsidian-nvim": "plugin-obsidian-nvim",
         "plugin-whichkey-nvim": "plugin-whichkey-nvim"
       }
     }

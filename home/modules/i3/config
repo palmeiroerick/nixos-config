@@ -57,4 +57,3 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+r restart
 
 exec redshift
-exec feh --bg-fill --randomize ~/.wallpaper/*
