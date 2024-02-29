@@ -35,7 +35,6 @@ lsp.html.setup({ capabilities = capabilities })
 lsp.cssls.setup({ capabilities = capabilities })
 lsp.jsonls.setup({ capabilities = capabilities })
 lsp.tailwindcss.setup({ capabilities = capabilities })
-lsp.emmet_ls.setup({ capabilities = capabilities })
 
 lsp.nil_ls.setup({ capabilities = capabilities })
 lsp.hls.setup({ capabilities = capabilities })

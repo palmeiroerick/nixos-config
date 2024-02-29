@@ -39,12 +39,11 @@
         alejandra
 
         # Hmtl, Css and JavaScript
-        vscode-langservers-extracted
-        nodePackages.typescript-language-server
         eslint_d
         prettierd
+        vscode-langservers-extracted
+        nodePackages.typescript-language-server
         tailwindcss-language-server
-        emmet-ls
       ];
 
       extraLuaConfig = ''
