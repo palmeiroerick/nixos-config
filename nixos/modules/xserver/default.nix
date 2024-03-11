@@ -12,8 +12,9 @@
         };
       };
       windowManager = {
-        i3 = {
+	xmonad = {
           enable = true;
+          enableContribAndExtras = true;
         };
       };
       libinput = {

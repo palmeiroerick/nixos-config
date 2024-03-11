@@ -44,6 +44,10 @@
         vscode-langservers-extracted
         nodePackages.typescript-language-server
         tailwindcss-language-server
+
+	# Haskell
+        haskell-language-server
+        stylish-haskell
       ];
 
       extraLuaConfig = ''
