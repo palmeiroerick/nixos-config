@@ -1,79 +1,84 @@
 configuration {
-  display-drun: "App:";
-  drun-display-format: "{name}";
-  font: "Hack Nerd Font Medium 14";
-  modi: "drun";
+  drun-display-format: "{icon} {name}";
+  font: "Hack Nerd Font Mono 14";
+  modi: "window,drun";
+  show-icons: true;
+  icon-theme: "Papirus";
+
+  drun {
+    display-name: "App:";
+  }
+
+  window {
+    display-name: "Window:";
+  }
+
+  timeout {
+    delay: 3;
+    action: "kb-cancel";
+  }
 }
 
 @theme "/dev/null"
 
 * {
-  bg: #1e1e2e;
-  bg-alt: #585b70;
-  bg-selected: #313244;
-
-  fg: #cdd6f4;
-  fg-alt: #7f849c;
-
-  border: 0;
+  border: 2;
   margin: 0;
   padding: 0;
   spacing: 0;
+
+  bg: #1a1b26;
+  bg-alt: #232433;
+  fg: #6a6f87;
+  fg-alt: #a9b1d6;
+
+  background-color: @bg;
+  text-color: @fg;
 }
 
 window {
-  width: 30%;
-  background-color: @bg;
-}
-
-element {
-  padding: 8 12;
-  background-color: transparent;
-  text-color: @fg-alt;
-}
-
-element selected {
-  text-color: @fg;
-  background-color: @bg-selected;
-}
-
-element-text {
-  background-color: transparent;
-  text-color: inherit;
-  vertical-align: 0.5;
-}
-
-element-icon {
-  size: 14;
-  padding: 0 10 0 0;
-  background-color: transparent;
-}
-
-entry {
-  padding: 12;
-  background-color: @bg-alt;
-  text-color: @fg;
-}
-
-inputbar {
-  children: [prompt, entry];
-  background-color: @bg;
-}
-
-listview {
-  background-color: @bg;
-  columns: 1;
-  lines: 6;
+  transparency: "real";
+  width: 700px;
 }
 
 mainbox {
   children: [inputbar, listview];
-  background-color: @bg;
+}
+
+inputbar {
+  background-color: @bg-alt;
+  children: [prompt, entry];
+}
+
+entry {
+  background-color: inherit;
+  padding: 12px 3px;
 }
 
 prompt {
-  enabled: true;
-  padding: 12 0 0 12;
-  background-color: @bg-alt;
-  text-color: @fg;
+  background-color: inherit;
+  padding: 12px;
 }
+
+listview {
+  lines: 6;
+}
+
+element {
+  children: [element-icon, element-text];
+}
+
+element-icon {
+  padding: 10px 10px;
+  size: 20px;
+}
+
+element-text {
+  padding: 10px 0;
+}
+
+element-text selected {
+  text-color: @fg-alt;
+}
+
+/* vim: ft=scss
