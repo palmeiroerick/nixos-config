@@ -45,7 +45,7 @@
         nodePackages.typescript-language-server
         tailwindcss-language-server
 
-	# Haskell
+        # Haskell
         haskell-language-server
         stylish-haskell
       ];
@@ -77,8 +77,8 @@
           plugin = nvim-ts-autotag;
         }
         {
-          plugin = onedarkpro-nvim;
-          config = toLuaFile ./plugins/onedarkpro.lua;
+          plugin = tokyonight-nvim;
+          config = toLuaFile ./plugins/colorscheme.lua;
         }
         {
           plugin = nvim-tree-lua;
