@@ -1,0 +1,44 @@
+env:
+  TERM: "xterm-256color"
+window:
+  padding:
+    x: 8
+    y: 3
+scrolling:
+  multiplier: 5
+font:
+  size: 18
+  normal:
+    family: Hack Nerd Font Mono
+    style: Regular
+  bold:
+    family: Hack Nerd Font Mono
+    style: Bold
+  italic:
+    family: Hack Nerd Font Mono
+    style: Italic
+  bold_italic:
+    family: Hack Nerd Font Mono
+    style: Bold Italic
+colors:
+  primary:
+    background: "#1a1b26"
+    foreground: "#c0caf5"
+  normal:
+    black: "#15161e"
+    red: "#f7768e"
+    green: "#9ece6a"
+    yellow: "#e0af68"
+    blue: "#7aa2f7"
+    magenta: "#bb9af7"
+    cyan: "#7dcfff"
+    white: "#a9b1d6"
+  bright:
+    black: "#414868"
+    red: "#f7768e"
+    green: "#9ece6a"
+    yellow: "#e0af68"
+    blue: "#7aa2f7"
+    magenta: "#bb9af7"
+    cyan: "#7dcfff"
+    white: "#c0caf5"
