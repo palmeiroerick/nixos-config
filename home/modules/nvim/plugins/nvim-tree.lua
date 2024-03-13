@@ -1,22 +1,8 @@
-local gheight = vim.api.nvim_list_uis()[1].height
-local gwidth = vim.api.nvim_list_uis()[1].width
-local width = 75
-local height = 25
-
 require("nvim-tree").setup({
   disable_netrw = true,
   view = {
-    float = {
-      enable = true,
-      open_win_config = {
-        relative = "editor",
-        width = width,
-        height = height,
-        row = (gheight - height) * 0.4,
-        col = (gwidth - width) * 0.5,
-      },
-    },
-    signcolumn = "no",
+    side = "right",
+    signcolumn = "yes",
   },
   renderer = {
     indent_markers = {
