@@ -33,8 +33,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) =
   M.fromList $
     [ ((modm, xK_Return), spawn $ XMonad.terminal conf),
       ((modm, xK_d), spawn "rofi -show drun"),
+      ((modm, xK_l), windows W.focusDown),
+      ((modm, xK_h), windows W.focusUp),
+      ((modm .|. shiftMask, xK_l), windows W.swapDown),
+      ((modm .|. shiftMask, xK_h), windows W.swapUp),
+      ((modm, xK_t), withFocused $ windows . W.sink),
       ((modm .|. shiftMask, xK_q), kill),
-      ((modm, xK_Tab), windows W.focusDown),
       ((modm .|. shiftMask, xK_r), spawn "xmonad --recompile; xmonad --restart"),
       ((modm .|. shiftMask, xK_e), io exitSuccess)
     ]
@@ -44,9 +48,24 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) =
          ]
 
 myMouseBindings :: XConfig l -> M.Map (KeyMask, Button) (Window -> X ())
-myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList []
+myMouseBindings (XConfig {XMonad.modMask = modm}) =
+  M.fromList
+    [ ( (modm, button1),
+        \w ->
+          focus w
+            >> mouseMoveWindow w
+            >> windows W.shiftMaster
+      ),
+      -- ((modm, button2), \w -> focus w >> windows W.shiftMaster),
+      ( (modm, button3),
+        \w ->
+          focus w
+            >> mouseResizeWindow w
+            >> windows W.shiftMaster
+      )
+    ]
 
-myLayout = spacingRaw True (Border 10 10 10 10) True (Border 10 10 10 10) True $ tiled ||| Mirror tiled ||| Full
+myLayout = spacingRaw True (Border 10 10 10 10) True (Border 10 10 10 10) True tiled
   where
     tiled = Tall nmaster delta ratio
     nmaster = 1
@@ -61,6 +80,7 @@ myLogHook = return ()
 
 myStartupHook = do
   spawnOnce "redshift &"
+  spawn "feh --bg-scale --randomize ~/.wallpapers/* &"
 
 main = xmonad defaults
 
