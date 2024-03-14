@@ -136,10 +136,6 @@
           config = toLuaFile ./plugins/autopairs.lua;
         }
         {
-          plugin = alpha-nvim;
-          config = toLuaFile ./plugins/alpha.lua;
-        }
-        {
           plugin = comment-nvim;
           config = toLuaFile ./plugins/comment.lua;
         }
@@ -149,10 +145,6 @@
         {
           plugin = whichkey-nvim;
           config = toLuaFile ./plugins/whichkey.lua;
-        }
-        {
-          plugin = bufferline-nvim;
-          config = toLuaFile ./plugins/bufferline.lua;
         }
       ];
     };

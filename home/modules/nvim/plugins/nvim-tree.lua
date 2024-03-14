@@ -1,5 +1,10 @@
 require("nvim-tree").setup({
   disable_netrw = true,
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    },
+  },
   view = {
     side = "right",
     signcolumn = "yes",
@@ -52,7 +57,7 @@ require("nvim-tree").setup({
   },
   diagnostics = {
     enable = true,
-    show_on_dirs = false,
+    show_on_dirs = true,
     icons = {
       hint = "",
       info = "",

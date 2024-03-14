@@ -30,14 +30,13 @@ keymap("n", "<S-h>", "<cmd>bp<cr>", { desc = "Prev buffer" })
 keymap("n", "<S-l>", "<cmd>bn<cr>", { desc = "Next buffer" })
 
 -- Save File
-keymap("n", "<C-s>", "<cmd>wa!<cr><esc>", { desc = "Save file" })
+keymap("n", "<C-s>", "<cmd>wa!<cr>", { desc = "Save file" })
 
 -- NvimTree
 keymap("n", "<leader>e", "<cmd>NvimTreeFocus<cr>", { desc = "File Explorer" })
 
 -- Telescope
-keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find Files" })
-keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
+keymap("n", "<leader><Space>", "<cmd>Telescope find_files<cr>", { desc = "Find Files" })
 
 -- LSP
 keymap("n", "<S-k>", ":lua vim.lsp.buf.hover()<cr>", { desc = "Lsp Hover" })

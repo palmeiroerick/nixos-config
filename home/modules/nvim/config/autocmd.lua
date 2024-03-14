@@ -22,11 +22,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 vim.cmd([[
-  augroup _statuscolumn
-    autocmd!
-    autocmd Filetype alpha :setlocal statuscolumn=""
-  augroup end
-
   augroup _diagnostic
     autocmd!
     autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=false})
