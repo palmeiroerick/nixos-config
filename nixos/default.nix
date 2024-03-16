@@ -9,6 +9,7 @@
     ./modules/nixpkgs
     ./modules/packages
     ./modules/pipewire
+    ./modules/steam
     ./modules/system
     ./modules/timezone
     ./modules/users
