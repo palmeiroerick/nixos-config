@@ -69,3 +69,12 @@ require("nvim-tree").setup({
     git_ignored = false,
   },
 })
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+    local filetype = vim.bo.filetype
+    if filetype == "NvimTree" then
+      vim.wo.statuscolumn = ""
+    end
+  end,
+})

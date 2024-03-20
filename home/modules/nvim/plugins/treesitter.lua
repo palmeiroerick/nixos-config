@@ -11,17 +11,6 @@ require("nvim-treesitter.configs").setup({
     enable = true,
   },
 
-  rainbow = {
-    enable = true,
-    query = "rainbow-parens",
-    strategy = require("ts-rainbow").strategy.global,
-    hlgroups = {
-      "TSRainbowOrange",
-      "TSRainbowViolet",
-      "TSRainbowCyan",
-    },
-  },
-
   autotag = {
     enable = true,
   },

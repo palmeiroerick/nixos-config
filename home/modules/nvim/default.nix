@@ -1,152 +1,79 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
-  nixpkgs = {
-    overlays = [
-      (final: prev: {
-        vimPlugins =
-          prev.vimPlugins
-          // {
-            whichkey-nvim = prev.vimUtils.buildVimPlugin {
-              name = "whichkey";
-              src = inputs.plugin-whichkey-nvim;
-            };
-          };
-      })
-    ];
-  };
-
-  programs = let
-    toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
-  in {
+{pkgs, ...}: {
+  programs = {
     neovim = {
       enable = true;
 
       defaultEditor = true;
 
       extraPackages = with pkgs; [
-        # Clipboard
+        # clipboard
         xclip
 
-        # Lua
-        lua-language-server
+        # lua
         stylua
+        lua-language-server
 
-        # Nix
+        # nix
         nil
         alejandra
 
-        # Hmtl, Css and JavaScript
-        eslint_d
-        prettierd
+        # html, css, javascript
         vscode-langservers-extracted
         nodePackages.typescript-language-server
         tailwindcss-language-server
+        emmet-language-server
+        prettierd
 
-        # Haskell
+        # haskell
         haskell-language-server
-        stylish-haskell
+      ];
+
+      plugins = with pkgs.vimPlugins; [
+        cmp-buffer
+        cmp-cmdline
+        cmp-nvim-lsp
+        cmp-path
+        cmp_luasnip
+        comment-nvim
+        conform-nvim
+        friendly-snippets
+        gitsigns-nvim
+        indent-blankline-nvim
+        lualine-nvim
+        luasnip
+        nvim-autopairs
+        nvim-cmp
+        nvim-lspconfig
+        nvim-tree-lua
+        nvim-treesitter.withAllGrammars
+        nvim-ts-autotag
+        nvim-ts-context-commentstring
+        nvim-web-devicons
+        plenary-nvim
+        rainbow-delimiters-nvim
+        telescope-nvim
+        tokyonight-nvim
+        which-key-nvim
       ];
 
       extraLuaConfig = ''
         ${builtins.readFile ./config/options.lua}
         ${builtins.readFile ./config/keymaps.lua}
-        ${builtins.readFile ./config/diagnostics.lua}
-        ${builtins.readFile ./config/autocmd.lua}
+        ${builtins.readFile ./plugins/autopairs.lua}
+        ${builtins.readFile ./plugins/comment.lua}
+        ${builtins.readFile ./plugins/completion.lua}
+        ${builtins.readFile ./plugins/conform.lua}
+        ${builtins.readFile ./plugins/gitsigns.lua}
+        ${builtins.readFile ./plugins/indentline.lua}
+        ${builtins.readFile ./plugins/lsp.lua}
+        ${builtins.readFile ./plugins/lualine.lua}
+        ${builtins.readFile ./plugins/nvim-tree.lua}
+        ${builtins.readFile ./plugins/rainbow-delimiters.lua}
+        ${builtins.readFile ./plugins/telescope.lua}
+        ${builtins.readFile ./plugins/tokyonight.lua}
+        ${builtins.readFile ./plugins/treesitter.lua}
+        ${builtins.readFile ./plugins/which-key.lua}
       '';
-
-      plugins = with pkgs.vimPlugins; [
-        {
-          plugin = nvim-lspconfig;
-          config = toLuaFile ./plugins/lsp.lua;
-        }
-        {
-          plugin = none-ls-nvim;
-          config = toLuaFile ./plugins/none-ls.lua;
-        }
-        {
-          plugin = nvim-treesitter.withAllGrammars;
-          config = toLuaFile ./plugins/treesitter.lua;
-        }
-        {
-          plugin = nvim-ts-rainbow2;
-        }
-        {
-          plugin = nvim-ts-autotag;
-        }
-        {
-          plugin = tokyonight-nvim;
-          config = toLuaFile ./plugins/colorscheme.lua;
-        }
-        {
-          plugin = nvim-tree-lua;
-          config = toLuaFile ./plugins/nvim-tree.lua;
-        }
-        {
-          plugin = nvim-web-devicons;
-        }
-        {
-          plugin = telescope-nvim;
-          config = toLuaFile ./plugins/telescope.lua;
-        }
-        {
-          plugin = plenary-nvim;
-        }
-        {
-          plugin = lualine-nvim;
-          config = toLuaFile ./plugins/lualine.lua;
-        }
-        {
-          plugin = indent-blankline-nvim;
-          config = toLuaFile ./plugins/indentline.lua;
-        }
-        {
-          plugin = gitsigns-nvim;
-          config = toLuaFile ./plugins/gitsigns.lua;
-        }
-        {
-          plugin = nvim-cmp;
-          config = toLuaFile ./plugins/completion.lua;
-        }
-        {
-          plugin = cmp-nvim-lsp;
-        }
-        {
-          plugin = cmp-buffer;
-        }
-        {
-          plugin = cmp-path;
-        }
-        {
-          plugin = cmp-cmdline;
-        }
-        {
-          plugin = cmp_luasnip;
-        }
-        {
-          plugin = luasnip;
-        }
-        {
-          plugin = friendly-snippets;
-        }
-        {
-          plugin = nvim-autopairs;
-          config = toLuaFile ./plugins/autopairs.lua;
-        }
-        {
-          plugin = comment-nvim;
-          config = toLuaFile ./plugins/comment.lua;
-        }
-        {
-          plugin = nvim-ts-context-commentstring;
-        }
-        {
-          plugin = whichkey-nvim;
-          config = toLuaFile ./plugins/whichkey.lua;
-        }
-      ];
     };
   };
 }
