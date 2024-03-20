@@ -2,21 +2,16 @@
   description = "flake";
   inputs = {
     nixpkgs = {
-      url = "github:NixOs/nixpkgs/nixos-23.11";
+      url = "github:NixOs/nixpkgs/nixos-unstable";
     };
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-23.11";
+      url = "github:nix-community/home-manager/master";
       inputs = {
         nixpkgs = {
           follows = "nixpkgs";
         };
       };
-    };
-
-    plugin-whichkey-nvim = {
-      url = "github:folke/which-key.nvim";
-      flake = false;
     };
   };
   outputs = {
