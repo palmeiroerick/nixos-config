@@ -12,7 +12,7 @@
         };
       };
       windowManager = {
-	xmonad = {
+        xmonad = {
           enable = true;
           enableContribAndExtras = true;
         };
