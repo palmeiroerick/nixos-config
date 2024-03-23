@@ -14,6 +14,7 @@
       pulseaudio
       emacs
       bitwarden
+      xfce.thunar
     ];
   };
 }
