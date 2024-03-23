@@ -1,17 +1,19 @@
 {pkgs, ...}: {
   home = {
-    packages = with pkgs; [dconf];
+    packages = with pkgs; [
+      dconf
+    ];
   };
 
   gtk = {
     enable = true;
     theme = {
-      name = "Adwaita-dark";
-      package = pkgs.gnome.adwaita-icon-theme;
+      name = "Tokyonight-Dark-B";
+      package = pkgs.tokyonight-gtk-theme;
     };
     iconTheme = {
-      name = "Adwaita-dark";
-      package = pkgs.gnome.adwaita-icon-theme;
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
     };
     cursorTheme = {
       name = "Adwaita";
