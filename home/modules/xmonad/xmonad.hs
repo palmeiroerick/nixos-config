@@ -6,7 +6,6 @@ import           XMonad.Layout.Spacing
 import qualified XMonad.StackSet       as W
 import           XMonad.Util.EZConfig
 import           XMonad.Util.SpawnOnce
-import           XMonad.Util.Ungrab
 
 myTerminal :: String
 myTerminal = "alacritty"
@@ -56,7 +55,6 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) =
             >> mouseMoveWindow w
             >> windows W.shiftMaster
       ),
-      -- ((modm, button2), \w -> focus w >> windows W.shiftMaster),
       ( (modm, button3),
         \w ->
           focus w
@@ -80,7 +78,7 @@ myLogHook = return ()
 
 myStartupHook = do
   spawnOnce "redshift &"
-  spawn "feh --bg-scale --randomize ~/.wallpapers/* &"
+  spawnOnce "feh --bg-scale --randomize ~/.wallpapers/* &"
 
 main = xmonad defaults
 
