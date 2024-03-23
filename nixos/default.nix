@@ -15,4 +15,10 @@
     ./modules/users
     ./modules/xserver
   ];
+
+  programs = {
+    nano = {
+      enable = false;
+    };
+  };
 }
