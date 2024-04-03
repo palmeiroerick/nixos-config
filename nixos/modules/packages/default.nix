@@ -14,7 +14,17 @@
       pulseaudio
       emacs
       bitwarden
-      xfce.thunar
+      anki
+      obsidian
     ];
+  };
+
+  programs = {
+    nano = {
+      enable = false;
+    };
+    thunar = {
+      enable = true;
+    };
   };
 }

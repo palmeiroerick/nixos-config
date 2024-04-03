@@ -3,6 +3,13 @@
     packages = with pkgs; [
       dconf
     ];
+    pointerCursor = {
+      name = "Bibata-Modern-Ice";
+      package = pkgs.bibata-cursors;
+      x11 = {
+        enable = false;
+      };
+    };
   };
 
   gtk = {
@@ -14,10 +21,6 @@
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
-    };
-    cursorTheme = {
-      name = "Adwaita";
-      package = pkgs.gnome.adwaita-icon-theme;
     };
   };
 }

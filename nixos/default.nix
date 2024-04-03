@@ -8,17 +8,10 @@
     ./modules/network
     ./modules/nixpkgs
     ./modules/packages
-    ./modules/pipewire
-    ./modules/steam
+    ./modules/pulseaudio
     ./modules/system
     ./modules/timezone
     ./modules/users
     ./modules/xserver
   ];
-
-  programs = {
-    nano = {
-      enable = false;
-    };
-  };
 }

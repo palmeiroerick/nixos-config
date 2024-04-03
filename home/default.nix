@@ -20,4 +20,10 @@
     ./modules/xmonad
     ./modules/zathura
   ];
+
+  services = {
+    betterlockscreen = {
+      enable = true;
+    };
+  };
 }

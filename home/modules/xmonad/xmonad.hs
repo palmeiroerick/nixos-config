@@ -77,6 +77,7 @@ myEventHook = mempty
 myLogHook = return ()
 
 myStartupHook = do
+  spawnOnce "xsetroot -cursor_name left_ptr"
   spawnOnce "redshift &"
   spawnOnce "feh --bg-scale --randomize ~/.wallpapers/* &"
 
