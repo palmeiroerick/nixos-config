@@ -1,7 +1,7 @@
 configuration {
   drun-display-format: "{icon} {name}";
   font: "Hack Nerd Font Mono 14";
-  modi: "drun";
+  modi: "drun,window";
   show-icons: true;
   icon-theme: "Papirus";
 

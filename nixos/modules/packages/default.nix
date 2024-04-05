@@ -16,15 +16,13 @@
       bitwarden
       anki
       obsidian
+      neofetch
     ];
   };
 
   programs = {
     nano = {
       enable = false;
-    };
-    thunar = {
-      enable = true;
     };
   };
 }

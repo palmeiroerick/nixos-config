@@ -10,6 +10,7 @@
     ./modules/home-manager
     ./modules/nixpkgs
     ./modules/nvim
+    ./modules/pcmanfm
     ./modules/ranger
     ./modules/redshift
     ./modules/rofi
@@ -20,10 +21,4 @@
     ./modules/xmonad
     ./modules/zathura
   ];
-
-  services = {
-    betterlockscreen = {
-      enable = true;
-    };
-  };
 }
