@@ -1,0 +1,5 @@
+require("options")
+require("lazy-init")
+require("keymaps")
+require("diagnostics")
+require("autocmd")
