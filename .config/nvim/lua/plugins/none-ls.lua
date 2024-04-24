@@ -9,7 +9,7 @@ return {
     require("mason-null-ls").setup({
       ensure_installed = {
         "stylua",
-        "prettierd"
+        "prettier",
       },
     })
 
@@ -33,7 +33,7 @@ return {
       end,
       sources = {
         formatting.stylua,
-        formatting.prettierd,
+        formatting.prettier,
       },
     })
   end,
