@@ -34,6 +34,7 @@ return {
       sources = {
         formatting.stylua,
         formatting.prettier,
+        formatting.emacs_scheme_mode,
       },
     })
   end,
