@@ -1,7 +1,0 @@
-[user]
-	name = palmeiroerick
-	email = 148393698+palmeiroerick@users.noreply.github.com
-[init]
-	defaultBranch = main
-[core]
-	editor = nvim
