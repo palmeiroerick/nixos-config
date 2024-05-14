@@ -21,6 +21,7 @@
       cinnamon.nemo
       feh
       xfce.xfce4-taskmanager
+      racket
     ];
   };
 }
