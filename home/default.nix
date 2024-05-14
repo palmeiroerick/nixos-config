@@ -12,7 +12,6 @@
     ./rofi.nix
     ./ssh.nix
     ./tmux.nix
-    ./vscode.nix
     ./xmonad.nix
     ./zathura.nix
   ];
@@ -29,4 +28,3 @@
     };
   };
 }
-
