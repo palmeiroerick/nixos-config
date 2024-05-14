@@ -13,6 +13,9 @@
         stylua
         lua-language-server
 
+        # Scheme formatter
+        emacs
+
         # nix
         nil
         alejandra
@@ -35,12 +38,12 @@
         cmp-path
         cmp_luasnip
         comment-nvim
-        conform-nvim
         friendly-snippets
         gitsigns-nvim
         indent-blankline-nvim
         lualine-nvim
         luasnip
+        none-ls-nvim
         nvim-autopairs
         nvim-cmp
         nvim-lspconfig
@@ -62,11 +65,11 @@
         ${builtins.readFile ./plugins/autopairs.lua}
         ${builtins.readFile ./plugins/comment.lua}
         ${builtins.readFile ./plugins/completion.lua}
-        ${builtins.readFile ./plugins/conform.lua}
         ${builtins.readFile ./plugins/gitsigns.lua}
         ${builtins.readFile ./plugins/indentline.lua}
         ${builtins.readFile ./plugins/lsp.lua}
         ${builtins.readFile ./plugins/lualine.lua}
+        ${builtins.readFile ./plugins/none-ls.lua}
         ${builtins.readFile ./plugins/nvim-tree.lua}
         ${builtins.readFile ./plugins/rainbow-delimiters.lua}
         ${builtins.readFile ./plugins/telescope.lua}

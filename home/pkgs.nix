@@ -14,7 +14,6 @@
       ghc
       eza
       pavucontrol
-      emacs
       anki
       obsidian
       neofetch
