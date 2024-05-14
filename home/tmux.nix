@@ -9,6 +9,8 @@
       in ''
         #!/bin/bash
 
+        set-option -g default-shell ~/.nix-profile/bin/fish
+
         set -g default-terminal "tmux-256color"
         set -ag terminal-overrides ",xterm-256color:RGB"
 
