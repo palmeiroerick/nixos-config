@@ -32,6 +32,7 @@
       ];
 
       plugins = with pkgs.vimPlugins; [
+        bufferline-nvim
         cmp-buffer
         cmp-cmdline
         cmp-nvim-lsp
@@ -63,6 +64,7 @@
         ${builtins.readFile ./config/options.lua}
         ${builtins.readFile ./config/keymaps.lua}
         ${builtins.readFile ./plugins/autopairs.lua}
+        ${builtins.readFile ./plugins/bufferline.lua}
         ${builtins.readFile ./plugins/comment.lua}
         ${builtins.readFile ./plugins/completion.lua}
         ${builtins.readFile ./plugins/gitsigns.lua}
