@@ -22,6 +22,7 @@
       xfce.xfce4-taskmanager
       racket
       vlc
+      syncthing
     ];
   };
 }
