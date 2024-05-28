@@ -6,6 +6,7 @@
     ./nix-settings.nix
     ./pkgs.nix
     ./sound.nix
+    ./steam.nix
     ./users.nix
     ./xorg.nix
   ];
