@@ -2,6 +2,7 @@
   imports = [
     ./alacritty.nix
     ./bash.nix
+    ./emacs
     ./fish.nix
     ./git.nix
     ./gtk.nix
