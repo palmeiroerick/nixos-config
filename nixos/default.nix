@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ./console.nix
+    ./flatpak.nix
     ./fonts.nix
     ./hardware.nix
     ./nix-settings.nix
