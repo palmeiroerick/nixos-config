@@ -8,10 +8,7 @@
   home = {
     packages = with pkgs; [
       brave
-      spotify
-      nodejs
       unzip
-      ghc
       eza
       pavucontrol
       anki
@@ -19,10 +16,12 @@
       neofetch
       cinnamon.nemo
       feh
-      xfce.xfce4-taskmanager
       racket
       vlc
-      syncthing
+      spotify
+      vscode
+
+      remnote
     ];
   };
 }

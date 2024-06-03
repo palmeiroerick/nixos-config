@@ -71,7 +71,6 @@
         spawnOnce "feh --bg-scale --randomize ~/.wallpapers/* &"
         spawnOnce "xsetroot -cursor_name left_ptr"
         spawnOnce "redshift &"
-        spawnOnce "syncthing --no-browser &"
 
       main = xmonad $ withNavigation2DConfig def $ ewmhFullscreen $ ewmh defaults
 

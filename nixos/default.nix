@@ -1,19 +1,20 @@
 {...}: {
   imports = [
     ./console.nix
-    ./flatpak.nix
     ./fonts.nix
     ./hardware.nix
     ./nix-settings.nix
     ./pkgs.nix
     ./sound.nix
-    ./steam.nix
     ./users.nix
     ./xorg.nix
   ];
 
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
+  boot.loader.grub = {
+    enable = true;
+    device = "/dev/sda";
+    useOSProber = true;
+  };
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
@@ -22,5 +23,5 @@
 
   i18n.defaultLocale = "en_US.UTF-8";
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.05";
 }
