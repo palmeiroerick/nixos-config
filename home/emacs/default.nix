@@ -1,5 +1,9 @@
 {...}: {
-  services.emacs.enable = true;
+  services.emacs = {
+    enable = true;
+    defaultEditor = true;
+    startWithUserSession = true;
+  };
 
   programs = {
     emacs = {
@@ -9,6 +13,10 @@
 
   home = {
     file = {
+      ".emacs.d/themes/" = {
+        source = ./themes;
+        recursive = true;
+      };
       ".emacs.d/init.el".source = ./init.el;
     };
   };

@@ -16,12 +16,9 @@
       neofetch
       cinnamon.nemo
       feh
-      racket
       vlc
       spotify
-      vscode
-
-      remnote
+      xfce.xfce4-taskmanager
     ];
   };
 }
