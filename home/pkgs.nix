@@ -12,12 +12,9 @@
       eza
       pavucontrol
       anki
-      obsidian
       neofetch
-      cinnamon.nemo
-      feh
       vlc
-      spotify
+      cinnamon.nemo
       xfce.xfce4-taskmanager
     ];
   };
