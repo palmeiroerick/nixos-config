@@ -12,24 +12,7 @@ lsp.lua_ls.setup({
   },
 })
 
-local function organize_imports()
-  local params = {
-    command = "_typescript.organizeImports",
-    arguments = { vim.api.nvim_buf_get_name(0) },
-    title = "",
-  }
-  vim.lsp.buf.execute_command(params)
-end
-
-lsp.tsserver.setup({
-  capabilities = capabilities,
-  commands = {
-    OrganizeImports = {
-      organize_imports,
-      description = "Organize Imports",
-    },
-  },
-})
+lsp.tsserver.setup({ capabilities = capabilities })
 
 lsp.eslint.setup({})
 
@@ -38,20 +21,6 @@ lsp.cssls.setup({ capabilities = capabilities })
 lsp.jsonls.setup({ capabilities = capabilities })
 lsp.tailwindcss.setup({ capabilities = capabilities })
 lsp.emmet_language_server.setup({ capabilities = capabilities })
-
-vim.api.nvim_create_autocmd("BufWritePre", {
-  callback = function()
-    local filetype = vim.bo.filetype
-    if
-      filetype == "javascript"
-      or filetype == "javascriptreact"
-      or filetype == "typescript"
-      or filetype == "typescriptreact"
-    then
-      vim.cmd("OrganizeImports")
-    end
-  end,
-})
 
 lsp.nil_ls.setup({ capabilities = capabilities })
 lsp.hls.setup({ capabilities = capabilities })
