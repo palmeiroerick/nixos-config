@@ -16,6 +16,7 @@
       vlc
       cinnamon.nemo
       xfce.xfce4-taskmanager
+      vscode
     ];
   };
 }
