@@ -38,21 +38,59 @@
 (setq standard-indent 2)
 
 (add-to-list 'default-frame-alist
-            '(font . "JetBrainsMono Nerd Font Mono-18"))
-
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
-(package-initialize)
-(package-refresh-contents)
-
-(unless (package-installed-p 'evil)
-  (package-install 'evil))
-
-(require 'evil)
-(evil-mode 1)
-
-(setq evil-cross-lines t)
+             '(font . "JetBrainsMono Nerd Font Mono-18"))
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'tokyogogh t)
+
+(require 'package)
+(setq package-enable-at-startuph nil)
+
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/"))
+(package-initialize)
+
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(use-package evil
+  :ensure t
+  :init
+  (setq evil-want-keybinding nil
+        evil-split-window-below t
+        evil-vsplit-window-right t
+        evil-cross-lines t)
+  (evil-mode))
+
+(use-package evil-collection
+  :ensure t
+  :after evil
+  :config
+  (evil-collection-init))
+
+(use-package which-key
+  :ensure t
+  :config
+  (which-key-mode))
+
+(use-package auto-complete
+  :ensure t
+  :init
+  (ac-config-default)
+  (global-auto-complete-mode t))
+
+;; (use-package flycheck
+;;  :ensure t
+;;  :init
+;;  (global-flycheck-mode t))
+
+(use-package tree-sitter
+  :ensure t
+  :hook ((emacs-lisp-mode . tree-sitter-mode))
+  :config
+  (global-tree-sitter-mode))
+
+(use-package tree-sitter-langs
+  :ensure t
+  :after tree-sitter)
