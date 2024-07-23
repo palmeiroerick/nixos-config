@@ -2,7 +2,7 @@
   console = {
     enable = true;
     useXkbConfig = true;
-    font = "ter-v32n";
+    font = "ter-132n";
     packages = with pkgs; [
       terminus_font
     ];

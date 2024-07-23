@@ -1,23 +1,24 @@
-{lib, ...}: {
+{...}: {
   services = {
     redshift = {
       enable = true;
-      settings = {
-        redshift = {
-          temp-day = lib.mkForce 3200;
-          temp-night = lib.mkForce 1000;
-          dawn-time = "4:00-6:00";
-          dusk-time = "17:30-19:30";
-          brightness = 1.0;
-          gamma = 1.0;
-          location-provider = "manual";
-          adjustment-method = "randr";
-        };
-        manual = {
-          lat = -15.47;
-          lon = -47.56;
-        };
+
+      temperature = {
+        day = 3200;
+        night = 1000;
       };
+
+      dawnTime = "4:00-6:00";
+      duskTime = "17:30-19:30";
+      
+      # settings = {
+      #   adjustment-method = "randr";
+      # };
+
+      provider = "manual";
+
+      latitude = -15.47;
+      longitude = -47.56;
     };
   };
 }

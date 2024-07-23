@@ -1,23 +1,20 @@
 {...}: {
   imports = [
     ./console.nix
+    ./flakes.nix
     ./fonts.nix
+    ./grub.nix
     ./hardware.nix
-    ./nix-settings.nix
     ./pkgs.nix
     ./sound.nix
     ./users.nix
-    ./xorg.nix
+    ./xserver.nix
   ];
 
-  boot.loader.grub = {
-    enable = true;
-    device = "/dev/sda";
-    useOSProber = true;
+  networking = {
+    hostName = "nixos";
+    networkmanager.enable = true;
   };
-
-  networking.hostName = "nixos";
-  networking.networkmanager.enable = true;
 
   time.timeZone = "America/Sao_Paulo";
 

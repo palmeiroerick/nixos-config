@@ -1,31 +1,26 @@
 {...}: {
   imports = [
-    ./alacritty.nix
-    ./bash.nix
+    ./bspwm
     ./emacs
+    ./nvim
+    ./rofi
+    ./tmux
+    ./alacritty.nix
     ./fish.nix
     ./git.nix
     ./gtk.nix
-    ./nvim
     ./pkgs.nix
+    ./polybar.nix
     ./ranger.nix
     ./redshift.nix
-    ./rofi.nix
-    ./ssh.nix
-    ./tmux.nix
-    ./xmonad.nix
     ./zathura.nix
   ];
 
   home = {
     username = "erick";
     homeDirectory = "/home/erick";
-    stateVersion = "23.11";
+    stateVersion = "24.05"; 
   };
 
-  programs = {
-    home-manager = {
-      enable = true;
-    };
-  };
+  programs.home-manager.enable = true;
 }

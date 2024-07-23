@@ -7,16 +7,27 @@
       name = "Bibata-Modern-Ice";
       size = 24;
       package = pkgs.bibata-cursors;
+      gtk.enable = true;
       x11 = {
         enable = false;
+        defaultCursor = "left_ptr";
       };
     };
   };
 
   gtk = {
     enable = true;
+    font = {
+      size = 10;
+      name = "JetBrainsMono Nerd Font Mono";
+      package = pkgs.nerdfonts.override {
+        fonts = [
+          "JetBrainsMono"
+        ];
+      };
+    };
     theme = {
-      name = "Tokyonight-Dark-B";
+      name = "Tokyonight-Dark";
       package = pkgs.tokyonight-gtk-theme;
     };
     iconTheme = {
