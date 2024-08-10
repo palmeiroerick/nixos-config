@@ -11,14 +11,13 @@
     eza
     pavucontrol
     anki
+    obsidian
     neofetch
     vlc
-    cinnamon.nemo
-    xfce.xfce4-taskmanager
+    nemo
     vscode
     spotify
     bitwarden
-    discord
   ];
 
   programs.feh.enable = true;

@@ -55,11 +55,11 @@
         ws-icon-2 = "III;%{T1}  %{T-}";
         ws-icon-3 = "IV;%{T1}  %{T-}";
         ws-icon-4 = "V;%{T1}  %{T-}";
-        ws-icon-5 = "VI;%{T1}   %{T-}";
-        ws-icon-6 = "VII;%{T1} 󰓇 %{T-}";
+        ws-icon-5 = "VI;%{T1} 󰓇 %{T-}";
+        ws-icon-6 = "VII;%{T1}  %{T-}";
         ws-icon-7 = "VIII;%{T1}  %{T-}";
         ws-icon-8 = "IX;%{T1}  %{T-}";
-        ws-icon-9 = "X;%{T1}  %{T-}";
+        ws-icon-9 = "X;%{T1}  %{T-}";
         format = "<label-state>";
         label-focused = "%icon%";
         label-focused-foreground = "${bg}";

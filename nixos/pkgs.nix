@@ -4,7 +4,9 @@
     allowUnfreePredicate = _: true;
   };
 
-  environment.systemPackages = with pkgs; [];
+  environment.systemPackages = with pkgs; [
+    distrobox
+  ];
 
   programs = {
     fish.enable = true;
@@ -12,5 +14,10 @@
     nano.enable = false;
     neovim.enable = true;
     starship.enable = true;
+  };
+
+  virtualisation = {
+    docker.enable = true;
+    podman.enable = true;
   };
 }
