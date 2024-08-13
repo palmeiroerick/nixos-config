@@ -18,6 +18,7 @@
     vscode
     spotify
     bitwarden
+    xfce.xfce4-taskmanager
   ];
 
   programs.feh.enable = true;

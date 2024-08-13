@@ -16,6 +16,19 @@
     picom = {
       enable = true;
       backend = "xrender";
+      shadow = true;
+      settings = {
+        corner-radius = 10;
+      };
+      wintypes = {
+        tooltip = {shadow = false;};
+        dock = {shadow = false;};
+        dnd = {shadow = false;};
+        menu = {shadow = false;};
+        dropdown_menu = {shadow = false;};
+        popup_menu = {shadow = false;};
+        utility = {shadow = false;};
+      };
     };
   };
 
