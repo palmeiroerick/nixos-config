@@ -8,8 +8,9 @@
       blue = "#7aa2f7";
       red = "#f7768e";
     in {
-      "bar/top" = {
+      "bar/main" = {
         bottom = false;
+        monitor = "HDMI-1";
         fixed-center = true;
         width = "100%";
         height = 30;
@@ -25,6 +26,32 @@
         modules-left = "date";
         modules-center = "bspwm";
         modules-right = "network sps pulseaudio sps memory sps cpu";
+        separator = "";
+        spacing = 0;
+        dim-value = 1;
+        wm-name = "bspwm";
+        wm-restack = "bspwm";
+        enable-ipc = false;
+      };
+
+      "bar/second" = {
+        bottom = false;
+        monitor = "VGA-1";
+        fixed-center = true;
+        width = "100%";
+        height = 30;
+        background = "${bg}";
+        foreground = "${blue}";
+        line-size = 0;
+        line-color = "${bg}";
+        padding-right = 1;
+        padding-left = 1;
+        module-margin = 0;
+        font-0 = "JetBrainsMono Nerd Font Mono:pixelsize=22;5.5";
+        font-1 = "JetBrainsMono Nerd Font Mono:pixelsize=11;3";
+        # modules-left = "date";
+        modules-center = "bspwm";
+        # modules-right = "network sps pulseaudio sps memory sps cpu";
         separator = "";
         spacing = 0;
         dim-value = 1;
@@ -50,16 +77,16 @@
         enable-scroll = false;
         reverse-scroll = false;
         fuzzy-match = true;
-        ws-icon-0 = "I;%{T1}  %{T-}";
-        ws-icon-1 = "II;%{T1}  %{T-}";
-        ws-icon-2 = "III;%{T1}  %{T-}";
-        ws-icon-3 = "IV;%{T1}  %{T-}";
-        ws-icon-4 = "V;%{T1}  %{T-}";
-        ws-icon-5 = "VI;%{T1} 󰓇 %{T-}";
-        ws-icon-6 = "VII;%{T1}  %{T-}";
-        ws-icon-7 = "VIII;%{T1}  %{T-}";
-        ws-icon-8 = "IX;%{T1}  %{T-}";
-        ws-icon-9 = "X;%{T1}  %{T-}";
+        ws-icon-0 = "I;%{T1}  %{T-}";
+        ws-icon-1 = "II;%{T1}  %{T-}";
+        ws-icon-2 = "III;%{T1}  %{T-}";
+        ws-icon-3 = "IV;%{T1}  %{T-}";
+        ws-icon-4 = "V;%{T1}  %{T-}";
+        ws-icon-5 = "VI;%{T1}  %{T-}";
+        ws-icon-6 = "VII;%{T1}  %{T-}";
+        ws-icon-7 = "VIII;%{T1}  %{T-}";
+        ws-icon-8 = "IX;%{T1}  %{T-}";
+        ws-icon-9 = "X;%{T1}  %{T-}";
         format = "<label-state>";
         label-focused = "%icon%";
         label-focused-foreground = "${bg}";

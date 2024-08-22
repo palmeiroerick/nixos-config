@@ -7,7 +7,13 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # monitor
-bspc monitor -d I II III IV V VI VII VIII IX X
+
+if [[ $(xrandr -q | grep "VGA-1 connected") ]]; then
+  xrandr --output HDMI-1 --primary --mode 1920x1080 --rotate normal --pos 0x0 --output VGA-1 --mode 1024x768 --rotate normal --pos 1920x530 --transform 1,0,0,0,1,0,0,0,1 --output DP-1 --off
+fi
+
+bspc monitor HDMI-1 -d I II III IV V 
+bspc monitor VGA-1 -d VI VII VIII IX X
 
 # border/gap
 bspc config border_width  0
@@ -22,7 +28,11 @@ bspc config focus_follows_pointer true
 
 # bar
 pkill polybar
-polybar &
+polybar main &
+
+if [[ $(xrandr -q | grep "VGA-1 connected") ]]; then
+  polybar second &
+fi
 
 # picom
 pkill picom
