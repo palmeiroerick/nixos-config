@@ -35,4 +35,10 @@
       package = pkgs.papirus-icon-theme;
     };
   };
+
+  home.file.".config/gtk-3.0/bookmarks".text = ''
+    file:///home/erick/repos repos
+    file:///home/erick/Downloads Downloads
+    file:///home/erick/Documents Documents
+  '';
 }

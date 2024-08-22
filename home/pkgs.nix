@@ -11,7 +11,6 @@
     eza
     pavucontrol
     anki
-    obsidian
     neofetch
     vlc
     nemo
