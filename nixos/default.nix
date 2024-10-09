@@ -5,6 +5,7 @@
     ./fonts.nix
     ./grub.nix
     ./hardware.nix
+    ./i18n.nix
     ./network.nix
     ./pkgs.nix
     ./sound.nix
@@ -13,8 +14,6 @@
   ];
 
   time.timeZone = "America/Sao_Paulo";
-
-  i18n.defaultLocale = "en_US.UTF-8";
 
   system.stateVersion = "24.05";
 }

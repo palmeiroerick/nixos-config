@@ -1,14 +1,15 @@
 {pkgs, ...}: {
-  users.users = {
-    erick = {
-      isNormalUser = true;
-      extraGroups = [
-        "audio"
-        "docker"
-        "wheel"
-      ];
+  users = {
+    users = {
+      erick = {
+        isNormalUser = true;
+        extraGroups = [
+          "audio"
+          "docker"
+          "wheel"
+        ];
+      };
     };
+    defaultUserShell = pkgs.fish;
   };
-
-  users.defaultUserShell = pkgs.fish;
 }
