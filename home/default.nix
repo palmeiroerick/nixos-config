@@ -1,7 +1,6 @@
 {...}: {
   imports = [
     ./bspwm
-    ./emacs
     ./nvim
     ./rofi
     ./tmux
