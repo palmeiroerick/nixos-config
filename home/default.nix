@@ -8,6 +8,7 @@
     ./fish.nix
     ./git.nix
     ./gtk.nix
+    ./picom.nix
     ./pkgs.nix
     ./polybar.nix
     ./ranger.nix

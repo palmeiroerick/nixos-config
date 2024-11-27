@@ -17,7 +17,7 @@ bspc monitor VGA-1 -d static
 
 # border/gap
 bspc config border_width  0
-bspc config window_gap    10
+bspc config window_gap    11
 
 # split ratio
 bspc config split_ratio 0.5
