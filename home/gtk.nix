@@ -27,18 +27,30 @@
       };
     };
     theme = {
-      name = "Tokyonight-Dark";
+      name = "Tokyonight-Dark-BL-LB";
       package = pkgs.tokyonight-gtk-theme;
     };
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
+    gtk2 = {
+      extraConfig = "gtk-application-prefer-dark-theme = true;";
+    };
+    gtk4 = {
+      extraConfig = {
+        gtk-application-prefer-dark-theme = true;
+      };
+    };
+    gtk3 = {
+      bookmarks = [
+        "file:///home/erick/repos"
+        "file:///home/erick/Downloads"
+        "file:///home/erick/Documents"
+      ];
+      extraConfig = {
+        gtk-application-prefer-dark-theme = true;
+      };
+    };
   };
-
-  home.file.".config/gtk-3.0/bookmarks".text = ''
-    file:///home/erick/repos repos
-    file:///home/erick/Downloads Downloads
-    file:///home/erick/Documents Documents
-  '';
 }

@@ -4,6 +4,7 @@
     script = "polybar &";
     settings = let
       bg = "#1a1b26";
+      white = "#c0caf5";
       black = "#414868";
       blue = "#7aa2f7";
       red = "#f7768e";
@@ -15,58 +16,21 @@
         width = "100%";
         height = 30;
         background = "${bg}";
-        foreground = "${blue}";
+        foreground = "${white}";
         line-size = 0;
         line-color = "${bg}";
-        padding-right = 1;
-        padding-left = 1;
         module-margin = 0;
         font-0 = "JetBrainsMono Nerd Font Mono:pixelsize=22;5.5";
         font-1 = "JetBrainsMono Nerd Font Mono:pixelsize=11;3";
-        modules-left = "date";
-        modules-center = "bspwm";
-        modules-right = "network sps pulseaudio sps memory sps cpu";
+        modules-left = "bspwm";
+        modules-center = "title";
+        modules-right = "date menu";
         separator = "";
         spacing = 0;
         dim-value = 1;
         wm-name = "bspwm";
         wm-restack = "bspwm";
         enable-ipc = false;
-      };
-
-      "bar/second" = {
-        bottom = false;
-        monitor = "VGA-1";
-        fixed-center = true;
-        width = "100%";
-        height = 30;
-        background = "${bg}";
-        foreground = "${blue}";
-        line-size = 0;
-        line-color = "${bg}";
-        padding-right = 1;
-        padding-left = 1;
-        module-margin = 0;
-        font-0 = "JetBrainsMono Nerd Font Mono:pixelsize=22;5.5";
-        font-1 = "JetBrainsMono Nerd Font Mono:pixelsize=11;3";
-        # modules-left = "date";
-        modules-center = "bspwm";
-        # modules-right = "network sps pulseaudio sps memory sps cpu";
-        separator = "";
-        spacing = 0;
-        dim-value = 1;
-        wm-name = "bspwm";
-        wm-restack = "bspwm";
-        enable-ipc = false;
-      };
-
-      "module/date" = {
-        type = "internal/date";
-        interval = 1.0;
-        date = "%{T2}%a, %d %b %y, %{T-}";
-        time = "%{T2}%H:%M%{T-}";
-        label = "%date%%time%";
-        label-foreground = "${blue}";
       };
 
       "module/bspwm" = {
@@ -99,44 +63,29 @@
         label-empty-foreground = "${black}";
       };
 
-      "module/sps" = {
-        type = "custom/text";
-        content = " ";
-      };
-
-      "module/network" = {
-        type = "internal/network";
-        interface = "enp3s0";
+      "module/date" = {
+        type = "internal/date";
         interval = 1.0;
-        label-connected = "%{T1} %{T-}%{T2}%downspeed%%{T-}";
-        label-connected-foreground = "${blue}";
+        date = "%{T2}%a, %d %b %y, %{T-}";
+        time = "%{T2}%H:%M%{T-}";
+        label = "%date%%time% ";
+        label-foreground = "${white}";
       };
 
-      "module/pulseaudio" = {
-        type = "internal/pulseaudio";
-        use-ui-max = false;
-        interval = 5;
-        format-volume = "<label-volume>";
-        label-volume = "%{T1}󰕾 %{T-}%{T2}%percentage%%%{T-}";
-        label-volume-foreground = "${blue}";
-        format-muted = "<label-muted>";
-        label-muted = "%{T1}󰝟 %{T-}%{T2}---%{T-}";
-        label-muted-foreground = "${red}";
-        click-right = "pavucontrol &";
+      "module/title" = {
+        type = "internal/xwindow";
+        format = "<label>";
+        label = "%{T2}%title%%{T-}";
+        label-maxlen = 64;
+        label-empty = "%{T2}Nixos - Bspwm%{T-}";
       };
 
-      "module/memory" = {
-        type = "internal/memory";
-        interval = 1;
-        label = "%{T1}%{T-}%{T2} %gb_used%%{T-}";
-        label-foreground = "${blue}";
-      };
-
-      "module/cpu" = {
-        type = "internal/cpu";
-        interval = 1;
-        label = "%{T1}%{T-}%{T2} %percentage:2%%%{T-}";
-        label-foreground = "${blue}";
+      "module/menu" = {
+        type = "custom/text";
+        content = "  ";
+        click-left = "rofi -show drun";
+        content-background = "${blue}";
+        content-foreground = "${bg}";
       };
     };
   };

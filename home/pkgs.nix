@@ -13,11 +13,12 @@
     anki
     neofetch
     vlc
-    nemo
+    cinnamon.nemo
     vscode
-    spotify
     bitwarden
     xfce.xfce4-taskmanager
+    obsidian
+    audacity
   ];
 
   programs.feh.enable = true;
