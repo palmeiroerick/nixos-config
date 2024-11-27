@@ -1,10 +1,8 @@
 {...}: {
   imports = [
-    ./bspwm
     ./nvim
-    ./rofi
-    ./tmux
     ./alacritty.nix
+    ./bspwm.nix
     ./fish.nix
     ./git.nix
     ./gtk.nix
@@ -13,7 +11,10 @@
     ./polybar.nix
     ./ranger.nix
     ./redshift.nix
+    ./rofi.nix
     ./spicetify.nix
+    ./sxhkd.nix
+    ./tmux.nix
     ./zathura.nix
   ];
 
