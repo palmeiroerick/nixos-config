@@ -12,7 +12,7 @@ lsp.lua_ls.setup({
   },
 })
 
-lsp.tsserver.setup({ capabilities = capabilities })
+lsp.ts_ls.setup({ capabilities = capabilities })
 
 lsp.eslint.setup({})
 

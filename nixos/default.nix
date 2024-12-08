@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ./console.nix
+    ./etc.nix
     ./flakes.nix
     ./fonts.nix
     ./grub.nix

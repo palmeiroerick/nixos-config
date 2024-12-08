@@ -13,7 +13,7 @@
     anki
     neofetch
     vlc
-    cinnamon.nemo
+    nemo
     vscode
     bitwarden
     xfce.xfce4-taskmanager
