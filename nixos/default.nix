@@ -3,6 +3,7 @@
     ./console.nix
     ./etc.nix
     ./flakes.nix
+    ./flatpak.nix
     ./fonts.nix
     ./grub.nix
     ./hardware.nix
@@ -10,6 +11,7 @@
     ./network.nix
     ./pkgs.nix
     ./sound.nix
+    ./steam.nix
     ./users.nix
     ./xserver.nix
   ];
